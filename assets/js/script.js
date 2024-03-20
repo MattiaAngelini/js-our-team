@@ -54,5 +54,9 @@ const team = [
     }
   ];
 
-  console.log(team)
+
+  //ciclo For In per stampare informazioni di ogni singolo membro del team.
+  for(let key in team) {
+    console.log(team[key])
+  }
   
