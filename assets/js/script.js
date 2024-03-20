@@ -58,11 +58,13 @@ const team = [
     }
   ];
 
-
 // variabile in cui inserisco informazioni membri sottoforma di stringa.
 let listDom;
+
 //ciclo For In per stampare informazioni di ogni singolo membro del team.
-for (let member in team) {
+for (let key in team) {
+    const member = team[key];
+    
     console.log(team[member])
     //registro sottoforma di stringhe info membri.
     listDom += `<div>
@@ -70,9 +72,10 @@ for (let member in team) {
                     <h3>${member.nome}</h3>
                     <p>${member.ruolo}</p>
                 </div>`;
-}
+
 //stampo nel dom.
 grid.innerHTML = listDom;
+}
 
 
 
