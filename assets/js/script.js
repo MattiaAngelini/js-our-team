@@ -20,6 +20,10 @@
 
 //START
 
+//Selettore main nel dom
+const grid = document.querySelector('#grid');
+
+
 //Array di oggetti contenenti informazioni membri del team:
 const team = [
     {
@@ -55,8 +59,22 @@ const team = [
   ];
 
 
-  //ciclo For In per stampare informazioni di ogni singolo membro del team.
-  for(let key in team) {
-    console.log(team[key])
-  }
+// variabile in cui inserisco informazioni membri sottoforma di stringa.
+let listDom;
+//ciclo For In per stampare informazioni di ogni singolo membro del team.
+for (let member of team) {
+    //registro sottoforma di stringhe info membri.
+    listDom += `<div>
+                    <img src="${member.foto}">
+                    <h3>${member.nome}</h3>
+                    <p>${member.ruolo}</p>
+                </div>`;
+}
+//stampo nel dom.
+grid.innerHTML = listDom;
+
+
+
+
+ 
   
