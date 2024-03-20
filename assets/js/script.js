@@ -25,7 +25,7 @@ const grid = document.querySelector('#grid');
 
 
 //Array di oggetti contenenti informazioni membri del team:
-const team = [
+let team = [
     {
       nome: 'Wayne Barnett',
       ruolo: 'Founder & CEO',
@@ -58,6 +58,14 @@ const team = [
     }
   ];
 
+  //ciclo for per iterare all'interno degli oggetti e stampare i valori delle chiavi.
+  for (let i = 0; i < team.length; i++) {
+    let member = team[i];
+    console.log("Nome:" + member.nome);
+    console.log("Ruolo:" + member.ruolo);
+    console.log("Alt-Text:" + member.foto);
+}
+    
 // variabile in cui inserisco informazioni membri sottoforma di stringa.
 let listDom;
 
